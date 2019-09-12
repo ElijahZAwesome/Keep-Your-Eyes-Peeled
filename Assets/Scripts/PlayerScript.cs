@@ -9,7 +9,9 @@ public class PlayerScript : MonoBehaviour
     public Camera mainCam;
     public GameObject gameTexture, lEyeTexture, rEyeTexture;
     public float pickupRadius;
+    public float eyeOffset = 0.1f;
     public GameObject crosshair;
+    public GameObject actualUIElements;
     private Eye lEye;
     private Eye rEye;
     private Vector3 origLPos, origRPos;
@@ -149,6 +151,7 @@ public class PlayerScript : MonoBehaviour
                 }
         }
 
+        actualUIElements.transform.SetAsLastSibling();
         crosshair.transform.SetAsLastSibling();
     }
 
@@ -224,10 +227,10 @@ public class PlayerScript : MonoBehaviour
                         // Do something with the object that was hit by the raycast.
                         Vector3 newPos = hit.point;
                         Quaternion newRot = Quaternion.FromToRotation(Vector3.forward, hit.normal);
-                        leftEye.transform.SetParent(null);
                         leftEye.transform.position = newPos;
                         leftEye.transform.rotation = newRot;
-                        leftEye.transform.position += leftEye.transform.forward * 0.01f;
+                        leftEye.transform.SetParent(hit.collider.gameObject.transform);
+                        leftEye.transform.position += leftEye.transform.forward * eyeOffset;
                     }
                     lEye.state = Eye.EyeState.attached;
                     break;
@@ -264,10 +267,10 @@ public class PlayerScript : MonoBehaviour
                         // Do something with the object that was hit by the raycast.
                         Vector3 newPos = hit.point;
                         Quaternion newRot = Quaternion.FromToRotation(Vector3.forward, hit.normal);
-                        rightEye.transform.SetParent(null);
+                        rightEye.transform.SetParent(hit.collider.gameObject.transform);
                         rightEye.transform.position = newPos;
                         rightEye.transform.rotation = newRot;
-                        rightEye.transform.position += rightEye.transform.forward * 0.01f;
+                        rightEye.transform.position += rightEye.transform.forward * eyeOffset;
                     }
                     rEye.state = Eye.EyeState.attached;
                     break;
