@@ -12,8 +12,7 @@ public class PlayerScript : MonoBehaviour
     public float eyeOffset = 0.1f;
     public GameObject crosshair;
     public GameObject actualUIElements;
-    private Eye lEye;
-    private Eye rEye;
+    public Eye lEye, rEye;
     private Vector3 origLPos, origRPos;
     private Quaternion origLRot, origRRot;
     [SerializeField]
@@ -267,9 +266,9 @@ public class PlayerScript : MonoBehaviour
                         // Do something with the object that was hit by the raycast.
                         Vector3 newPos = hit.point;
                         Quaternion newRot = Quaternion.FromToRotation(Vector3.forward, hit.normal);
-                        rightEye.transform.SetParent(hit.collider.gameObject.transform);
                         rightEye.transform.position = newPos;
                         rightEye.transform.rotation = newRot;
+                        rightEye.transform.SetParent(hit.collider.gameObject.transform);
                         rightEye.transform.position += rightEye.transform.forward * eyeOffset;
                     }
                     rEye.state = Eye.EyeState.attached;

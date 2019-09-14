@@ -13,6 +13,7 @@ public class Eye : MonoBehaviour
     }
 
     public EyeState state;
+    public Camera eyeCam;
     public bool left = false;
 
     // Start is called before the first frame update
