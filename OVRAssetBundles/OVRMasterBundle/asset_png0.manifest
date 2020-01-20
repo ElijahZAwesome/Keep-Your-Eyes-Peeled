@@ -1,0 +1,24 @@
+ManifestFileVersion: 0
+CRC: 2525770928
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 93f4ead7a2fa1ebf0e4f14956e040ac5
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 9e6ad29cbd2df8fbe1a15315db0e51ab
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+Assets:
+- Assets/Textures/MiddleMask.png
+- Assets/Textures/RightMask.png
+- Assets/Textures/Eye_Blue.png
+- Assets/Coffee/UIExtensions/SoftMaskForUGUI/SoftMaskIcon.png
+- Assets/Coffee/UIExtensions/SoftMaskForUGUI/SoftMaskableIcon.png
+- Assets/Textures/Eye_Red.png
+- Assets/Textures/LeftMask.png
+Dependencies: []

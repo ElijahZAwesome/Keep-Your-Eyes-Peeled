@@ -1,0 +1,18 @@
+ManifestFileVersion: 0
+CRC: 3506740354
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 36f29f44ba2a924b97ce4c1564dcc9ba
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: ca637ba5617d79359be14e488ee64d4d
+HashAppended: 0
+ClassTypes:
+- Class: 84
+  Script: {instanceID: 0}
+Assets:
+- Assets/Textures/REye Render Texture 2.renderTexture
+- Assets/Textures/LEye Render Texture 1.renderTexture
+- Assets/Textures/Main Render.renderTexture
+Dependencies: []

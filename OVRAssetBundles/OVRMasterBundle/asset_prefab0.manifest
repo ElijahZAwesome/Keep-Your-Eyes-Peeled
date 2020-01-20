@@ -1,0 +1,27 @@
+ManifestFileVersion: 0
+CRC: 1402069341
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: b9717860669ed2c51e80df4c28763ea9
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: e3c0df2f370fe0c10fcf67dc8ea932ab
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: ac27124318cf8e84aa7350c2ac1cdb80, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 00f3402a2ea5bff4880c0313515240cd, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+Assets:
+- Assets/Oculus/Avatar/Content/Prefabs/LocalAvatar.prefab
+Dependencies:
+- D:/Documents/GitHub/Keep Your Eyes Peeled/OVRAssetBundles/OVRMasterBundle/asset_resources

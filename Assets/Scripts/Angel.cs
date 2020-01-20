@@ -6,12 +6,14 @@ public class Angel : MonoBehaviour
 {
 
     public GameObject player;
+    public GameObject body;
     public bool active = true;
     [SerializeField]
     private bool seen;
     private NavMeshAgent agent;
     private float origSpeed;
     private PlayerScript playerScript;
+    private Renderer myRenderer;
 
     void Start()
     {
@@ -20,6 +22,7 @@ public class Angel : MonoBehaviour
         origSpeed = agent.speed;
         InvokeRepeating("AngelUpdate", 0, 0.016666f);
         playerScript = player.GetComponent<PlayerScript>();
+        myRenderer = body.GetComponent<Renderer>();
     }
 
     public bool CheckSeen()
@@ -28,7 +31,7 @@ public class Angel : MonoBehaviour
         // Check if seen
         if (playerScript.lEye.state == Eye.EyeState.inHead && playerScript.rEye.state == Eye.EyeState.inHead)
         {
-            if(GetComponent<Renderer>().IsVisibleFrom(playerScript.mainCam))
+            if(myRenderer.IsVisibleFrom(playerScript.mainCam))
             {
                 isSeen = true;
                 seen = isSeen;
@@ -46,7 +49,7 @@ public class Angel : MonoBehaviour
             return isSeen;
         } else
         {
-            if(GetComponent<Renderer>().IsVisibleFrom(playerScript.lEye.eyeCam))
+            if(myRenderer.IsVisibleFrom(playerScript.lEye.eyeCam))
             {
                 if(playerScript.lEye.state == Eye.EyeState.inHead || playerScript.lEye.state == Eye.EyeState.attached)
                 {

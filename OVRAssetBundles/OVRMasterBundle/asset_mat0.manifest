@@ -1,0 +1,25 @@
+ManifestFileVersion: 0
+CRC: 2586786135
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 997a9c26af404b9f21287ac2a5984ff6
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 21c99c86a43ad817b2cb7f65458ae090
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+Assets:
+- Assets/Materials/Floor.mat
+- Assets/Materials/Eye_Right.mat
+- Assets/Materials/Black.mat
+- Assets/Materials/Eye_Left.mat
+- Assets/Materials/Enemy.mat
+Dependencies:
+- D:/Documents/GitHub/Keep Your Eyes Peeled/OVRAssetBundles/OVRMasterBundle/asset_png0
